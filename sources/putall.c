@@ -1,10 +1,25 @@
 #include "../libft/libft.h"
 #include "../includes/ft_printf.h"
 
+int	int_count_n(int nb)
+{
+	int	count;
+
+	count = 0;
+	while (nb / 10)
+	{
+		count++;
+		nb /= 10;
+	}
+	return (count + 1);
+}
+
 void ft_putnbr(int nb, int *count)
 {
     ft_putnbr_fd(nb, 1);
-    *count += int_count(nb);
+    if (nb < 0)
+        *count += 1;
+    *count += int_count_n(nb);
 }
 
 void ft_putchar(int c, int *count)

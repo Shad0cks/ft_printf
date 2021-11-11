@@ -25,19 +25,17 @@ static char	*ft_strrev(char *str)
 	return (str);
 }
 
-
-void hex(int nb, int *count)
+void hex(unsigned long nb, char* base ,int *count)
 {   
     int index = 0;
     char str[20];
     while (nb >= 16)
     {
-        str[index] = "0123456789abcdef"[nb % 16];
+        str[index] = base[nb % 16];
         nb /= 16;
         index++;
     }
-    str[index] = "0123456789abcdef"[nb];
+    str[index] = base[nb];
     str[index + 1] = '\0';
-    
     ft_putstr(ft_strrev(str), count);
 }

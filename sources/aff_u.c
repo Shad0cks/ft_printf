@@ -1,7 +1,7 @@
 #include "../libft/libft.h"
 #include "../includes/ft_printf.h"
 
-int	int_count(unsigned int nb)
+static int	int_count(unsigned int nb)
 {
 	int	count;
 

@@ -3,11 +3,10 @@ NAME			= libftprintf.a
 SRCS_LIST		= \
 					ft_printf.c 	\
 					parse_args.c 	\
-					aff_p.c 		\
 					aff_u.c 		\
 					conv.c			\
 					putall.c		\
-					
+
 
 SRCS			= $(addprefix ${FOLDER}/, ${SRCS_LIST})
 
