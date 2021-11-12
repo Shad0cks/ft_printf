@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   conv.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pdeshaye <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/12 01:44:15 by pdeshaye          #+#    #+#             */
+/*   Updated: 2021/11/12 01:44:15 by pdeshaye         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft/libft.h"
 #include "../includes/ft_printf.h"
 
@@ -25,17 +37,19 @@ static char	*ft_strrev(char *str)
 	return (str);
 }
 
-void hex(unsigned long nb, char* base ,int *count)
-{   
-    int index = 0;
-    char str[20];
-    while (nb >= 16)
-    {
-        str[index] = base[nb % 16];
-        nb /= 16;
-        index++;
-    }
-    str[index] = base[nb];
-    str[index + 1] = '\0';
-    ft_putstr(ft_strrev(str), count);
+void	hex(unsigned long nb, char *base, int *count)
+{
+	int		index;
+	char	str[20];
+
+	index = 0;
+	while (nb >= 16)
+	{
+		str[index] = base[nb % 16];
+		nb /= 16;
+		index++;
+	}
+	str[index] = base[nb];
+	str[index + 1] = '\0';
+	ft_putstr(ft_strrev(str), count);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   aff_u.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pdeshaye <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/12 01:43:01 by pdeshaye          #+#    #+#             */
+/*   Updated: 2021/11/12 01:43:01 by pdeshaye         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft/libft.h"
 #include "../includes/ft_printf.h"
 
@@ -14,9 +26,7 @@ static int	int_count(unsigned int nb)
 	return (count + 1);
 }
 
-
-
-void    ft_itoa_unsiged(unsigned int nb, int *count)
+void	ft_itoa_unsiged(unsigned int nb, int *count)
 {
 	char			*result;
 	int				index;
@@ -34,6 +44,6 @@ void    ft_itoa_unsiged(unsigned int nb, int *count)
 	}
 	result[index - 1] = (nb % 10) + '0';
 	ft_putstr(result, count);
-    free(result);
-    result = NULL;
+	free(result);
+	result = NULL;
 }
